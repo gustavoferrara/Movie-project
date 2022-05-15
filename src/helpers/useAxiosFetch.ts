@@ -1,6 +1,8 @@
 import axios from 'axios';
+import { useState } from 'react';
 
-type HandleFn = () => unknown;
+type HandleFn = () => any;
+type HanldeFn2 = (param: any) => any;
 
 interface Body {
   data: object;
@@ -9,20 +11,23 @@ interface Body {
   handleFinish?: HandleFn;
 }
 
-const axiosFetch = (url: string) =>
+const AxiosFetch = (url: string, handleFinish?: HanldeFn2) => {
+  const [isLoading, setIsLoading] = useState(false);
+
   axios
     .get(url)
     .then(res => {
       if (res.statusText !== 'OK') {
-        console.log(res);
         throw Error(res.statusText);
       }
+      // handleFinish(res.data);
+      // console.log(res);
+      setIsLoading(true);
+      console.log('ran');
       return res.data;
     })
-    .catch(err => {
-      console.log(err);
-      return err.message;
-    });
+    .catch(err => err.message);
+};
 
 export const axiosPost = (url: string, body: Body) => {
   if (body.handleStart) body.handleStart();
@@ -50,4 +55,4 @@ export const axiosDelete = (url: string, handleFinish: HandleFn) => {
     });
 };
 
-export default axiosFetch;
+export default AxiosFetch;
