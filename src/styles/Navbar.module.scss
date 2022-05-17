@@ -1,0 +1,35 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  margin: 10px auto;
+  width: 100%;
+  // border: 1px solid green;
+  position: relative;
+
+  .logo {
+    width: 48%;
+    height: 50%;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .mobilemenu {
+    width: 6%;
+    height: 45%;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &_desktoplinks {
+    list-style: none;
+    margin-right: 40px;
+    display: flex;
+    margin-top: 5px;
+  }
+  &_desktoplinks_item {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+}
