@@ -2,22 +2,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
-  margin: 10px auto;
+  height: 60px;
   width: 100%;
-  // border: 1px solid green;
-  position: relative;
+  // background-color: rgba(0, 0, 0, 0.774);
+  position: fixed;
+  padding: 0 calc(17 * 1px + (25 - 17) * (100vw - 320 * 1px) / (540 - 320));
+  // padding: 0 1.1rem;
+  top: 0;
+  left: 0;
 
   .logo {
-    width: 48%;
-    height: 50%;
+    // width: 48%;
+    // height: 50%;
+    width: 8.5rem;
+    height: 2rem;
     position: relative;
     cursor: pointer;
   }
 
   .mobilemenu {
-    width: 6%;
-    height: 45%;
+    // width: 6%;
+    // height: 45%;
+    width: 1.1rem;
+    height: 1.6rem;
     position: relative;
     cursor: pointer;
   }
