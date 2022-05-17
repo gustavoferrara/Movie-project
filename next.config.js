@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-labels */
-
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
@@ -65,7 +63,15 @@ module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   eslint: {
-    dirs: ['pages', 'components', 'helpers', 'hooks', 'contexts', 'features'],
+    dirs: [
+      'pages',
+      'components',
+      'helpers',
+      'styles',
+      'hooks',
+      'contexts',
+      'features',
+    ],
   },
 
   async headers() {
