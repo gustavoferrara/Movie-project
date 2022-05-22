@@ -1,11 +1,12 @@
-import Navbar from './Navbar';
 import Head from 'next/head';
+
+import Navbar from './Navbar';
 
 interface LayoutWrapperProps {
   children: React.ReactNode;
 }
 
-const LayoutWrapper = ({ children }: LayoutWrapperProps) => {
+const LayoutWrapper: React.FC<LayoutWrapperProps> = ({ children }) => {
   return (
     <>
       <Head>
