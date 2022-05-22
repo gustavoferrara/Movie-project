@@ -10,33 +10,62 @@
   // padding: 0 1.1rem;
   top: 0;
   left: 0;
+  z-index: 2;
+}
 
-  .logo {
-    // width: 48%;
-    // height: 50%;
-    width: 8.5rem;
-    height: 2rem;
-    position: relative;
-    cursor: pointer;
+.logo {
+  // width: 48%;
+  // height: 50%;
+  width: 8.5rem;
+  height: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.mobilemenu {
+  // width: 6%;
+  // height: 45%;
+  width: 1.1rem;
+  height: 1.6rem;
+  position: relative;
+  cursor: pointer;
+}
+
+// .desktoplinks {
+//   display: none;
+// }
+
+.mobilemenu_container {
+  display: flex;
+  gap: 50px;
+}
+
+.desktoplinks {
+  display: flex;
+  width: max-content;
+  list-style: none;
+}
+
+.desktoplinks_item {
+  cursor: pointer;
+  transition: color 0.15s ease-out;
+
+  &:first-child {
+    margin-right: 50px;
   }
 
-  .mobilemenu {
-    // width: 6%;
-    // height: 45%;
-    width: 1.1rem;
-    height: 1.6rem;
-    position: relative;
-    cursor: pointer;
+  &:hover {
+    color: red;
   }
+}
 
-  &_desktoplinks {
-    list-style: none;
-    margin-right: 40px;
-    display: flex;
-    margin-top: 5px;
-  }
-  &_desktoplinks_item {
-    margin: 0 10px;
-    cursor: pointer;
-  }
+.openednavbar {
+  @extend .navbar;
+  justify-content: flex-end;
+}
+
+@media screen and (min-width: 33.75em) {
+  // .mobilemenu {
+  //   display: none;
+  // }
 }
