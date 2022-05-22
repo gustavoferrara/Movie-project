@@ -1,7 +1,9 @@
 import '@/styles/globals.scss';
-import LayoutWrapper from '@/components/LayoutWrapper';
+
 import { AppProps } from 'next/app';
 import { useEffect } from 'react';
+
+import LayoutWrapper from '@/components/LayoutWrapper';
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   useEffect(() => {
